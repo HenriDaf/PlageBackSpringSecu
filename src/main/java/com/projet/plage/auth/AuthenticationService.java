@@ -31,17 +31,17 @@ public class AuthenticationService {
 	private final UserRepository userRepository;
 	
 	private final ILocataireService iLocataireService;
-	private final LocataireDao locataireDao;
+	
 	private final LocataireMapper locataireMapper;
 	
 	private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
-    private final AuthenticationManager authenticationManager;
+    private  AuthenticationManager authenticationManager;
     private final IPaysService iPaysService;
     private final ILienDeParenteService iLienDeParenteService;
     
 	public AuthenticationResponse register(RegisterRequest request) {
-System.out.println(request);
+
 		var user=User.builder()
 				.firstName(request.getFirstName())
 				.lastName(request.getLastName())
@@ -83,6 +83,7 @@ System.out.println(request);
 	}
 
 	public AuthenticationResponse authenticate(AuthenticationRequest request) {
+		
 		authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(
 						request.getEmail(), 
@@ -92,9 +93,10 @@ System.out.println(request);
 		var user= userRepository.findByEmail(request.getEmail())
 				.orElseThrow();
 		
+		
 		var jwtToken=jwtService.generateToken(user);
 		
-		
+	
 		return AuthenticationResponse.builder()
 				.token(jwtToken)
 				.build();
@@ -102,22 +104,22 @@ System.out.println(request);
 	}
 	
 	public AuthenticationResponse authenticateLocataire(AuthenticationRequest request) {
+		System.out.println(request.getEmail());
+		System.out.println(request.getPassword());
+	
 		
-		authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken(
-						request.getEmail(), 
-						request.getPassword()
-						)
-				);
-		
-	    var locataire=locataireDao.findByEmail(request.getEmail());
+	    Locataire locataire=iLocataireService.recupererLocataireParEmail(request.getEmail());
+	    System.out.println(locataire.getEmail());
+	    System.out.println(locataire);
 	    var jwtToken= jwtService.generateToken(locataire);
 	    
 	    
-		
+	    System.out.println(jwtToken);
 		return AuthenticationResponse.builder()
 				.token(jwtToken)
 				.build();
+		
+		
 	}
 
 }

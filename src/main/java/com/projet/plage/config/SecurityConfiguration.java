@@ -23,22 +23,31 @@ public class SecurityConfiguration {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		
-		String[]pathArray= new String[] {"/api/v1/auth/**","/swagger-ui/**", "h2-console/**"};
-		
+		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/**"};
+		String[]pathAngular=new String[] {"/api/authentifierConcessionnaire","/api/authentifierLocataire","/api/creationLocataire","/api/recupererListeLocataire"};
+		String[]swaggerArray=new String[] {
+				"/v3/api-docs",
+	            "/swagger-ui/**",
+	            "/v3/api-docs/swagger-config"
+				};
 		httpSecurity
 		.csrf()
 		.disable()
 		.authorizeHttpRequests()
-		.antMatchers("/api/v1/**")
+		.antMatchers(swaggerArray)
 		.permitAll()
-		.anyRequest()
-		.authenticated()
+		.antMatchers(pathAngular)
+		.permitAll()
+		.antMatchers(pathArray)
+		.permitAll()
 		.and()
 		.sessionManagement()
 		.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and()
 		.authenticationProvider(authenticationProvider)
 		.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+		
+		httpSecurity.cors();
 		return httpSecurity.build();
 	}
 }

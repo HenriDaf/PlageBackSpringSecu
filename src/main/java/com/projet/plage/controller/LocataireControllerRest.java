@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -26,6 +27,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import lombok.AllArgsConstructor;
 
 @RestController("/api/")
+
 @AllArgsConstructor
 @CrossOrigin(origins = "http://localhost:4200/")
 public class LocataireControllerRest {
@@ -64,6 +66,7 @@ public class LocataireControllerRest {
 	@ResponseStatus(code=HttpStatus.OK)
 	@Operation(description = "Authentification d'un locataire")
 	public ResponseEntity<LocataireDto> authentifierLocataire(@RequestBody ObjectNode objectNode) {
+		System.out.println(objectNode);
 		String email= objectNode.get("email").asText();
 		String motDePasse= objectNode.get("password").asText();
 		

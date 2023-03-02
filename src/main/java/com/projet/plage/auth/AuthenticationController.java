@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projet.plage.dao.LocataireDao;
+
 import com.projet.plage.dao.UserRepository;
 import com.projet.plage.entity.User;
 
@@ -24,7 +24,7 @@ public class AuthenticationController {
 
 	private final AuthenticationService authenticationService;
 	private final UserRepository userRepository; 
-	private final LocataireDao locataireDao;
+	
 	
 	@PostMapping("/register")
 	public ResponseEntity<AuthenticationResponse>register(@RequestBody RegisterRequest request){
@@ -50,9 +50,18 @@ public class AuthenticationController {
 		
 	}
 	
-	@PostMapping("authentificationLocataire")
-	public ResponseEntity<AuthenticationResponse>authenticateLocataire(@RequestBody AuthenticationRequest authenticationRequest){
-		return ResponseEntity.ok(authenticationService.authenticateLocataire(authenticationRequest));
+	@PostMapping("/authentificationLocataire")
+	public ResponseEntity<AuthenticationResponse>authenticateLocataire(@RequestBody AuthenticationRequest request){
+		return ResponseEntity.ok(authenticationService.authenticateLocataire(request));
+		
+		/*
+		 * Possibilité de renvoyer un objet DTO avec nom prenom email mdp dans le ResponseEntity
+		 * et du coup il faudrait peut ajouter le token dans cet objet
+		 */
 		
 	}
+	
+	
+	
+	
 }
