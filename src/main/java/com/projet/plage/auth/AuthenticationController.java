@@ -1,0 +1,58 @@
+package com.projet.plage.auth;
+
+import java.util.List;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.projet.plage.dao.LocataireDao;
+import com.projet.plage.dao.UserRepository;
+import com.projet.plage.entity.User;
+
+
+import lombok.RequiredArgsConstructor;
+
+@RestController
+@RequestMapping("/api/v1/auth")
+@RequiredArgsConstructor
+
+public class AuthenticationController {
+
+	private final AuthenticationService authenticationService;
+	private final UserRepository userRepository; 
+	private final LocataireDao locataireDao;
+	
+	@PostMapping("/register")
+	public ResponseEntity<AuthenticationResponse>register(@RequestBody RegisterRequest request){
+	
+		return ResponseEntity.ok(authenticationService.register(request));
+	}
+	
+	
+	@PostMapping("/authenticate")
+	public ResponseEntity<AuthenticationResponse>authenticate(@RequestBody AuthenticationRequest request){
+		
+		return ResponseEntity.ok(authenticationService.authenticate(request));
+	}
+	
+	@GetMapping("listUsers")
+	public ResponseEntity<List<User>> recupererListeUsers(){
+		return ResponseEntity.ok(userRepository.findAll());
+	}
+	
+	@PostMapping("/inscriptionLocataire")
+	public ResponseEntity<AuthenticationResponse>registerLocataire(@RequestBody InscriptionRequest request){
+		return ResponseEntity.ok(authenticationService.registerLocataire(request));
+		
+	}
+	
+	@PostMapping("authentificationLocataire")
+	public ResponseEntity<AuthenticationResponse>authenticateLocataire(@RequestBody AuthenticationRequest authenticationRequest){
+		return ResponseEntity.ok(authenticationService.authenticateLocataire(authenticationRequest));
+		
+	}
+}

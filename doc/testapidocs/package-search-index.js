@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.projet.plage"},{"l":"com.projet.plage.controller"},{"l":"com.projet.plage.entity"}];updateSearchResults();

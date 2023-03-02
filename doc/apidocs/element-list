@@ -1,0 +1,12 @@
+com.projet.plage
+com.projet.plage.config
+com.projet.plage.controller
+com.projet.plage.controller.auth
+com.projet.plage.dao
+com.projet.plage.dto
+com.projet.plage.entity
+com.projet.plage.exception
+com.projet.plage.initialisation
+com.projet.plage.mapper
+com.projet.plage.service
+com.projet.plage.service.impl
