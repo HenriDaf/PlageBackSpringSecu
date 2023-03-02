@@ -24,7 +24,7 @@ public class SecurityConfiguration {
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		
 		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/**"};
-		String[]pathAngular=new String[] {"/api/authentifierConcessionnaire","/api/authentifierLocataire","/api/creationLocataire","/api/recupererListeLocataire"};
+		String[]pathAngular=new String[] {"/authentifierConcessionnaire","/recupererListeLocataire","/authentifierLocataire","/creationLocataire"};
 		String[]swaggerArray=new String[] {
 				"/v3/api-docs",
 	            "/swagger-ui/**",
@@ -40,6 +40,8 @@ public class SecurityConfiguration {
 		.permitAll()
 		.antMatchers(pathArray)
 		.permitAll()
+		.anyRequest()
+		.authenticated()
 		.and()
 		.sessionManagement()
 		.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
