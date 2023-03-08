@@ -18,7 +18,7 @@ import lombok.AllArgsConstructor;
 
 @RestController
 @AllArgsConstructor
-@RequestMapping("/api")
+@RequestMapping("/api/")
 @Validated
 @CrossOrigin(origins = "http://localhost:4200/", maxAge = 3600)
 public class LienDeParenteControllerRest {

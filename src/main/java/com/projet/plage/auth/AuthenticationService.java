@@ -1,42 +1,54 @@
 package com.projet.plage.auth;
 
 
+import org.apache.logging.log4j.Logger;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.projet.plage.config.JwtService;
+import com.projet.plage.dao.ConcessionnaireDao;
 import com.projet.plage.dao.LocataireDao;
 import com.projet.plage.dao.UserRepository;
+import com.projet.plage.dto.ConcessionnaireDto;
 import com.projet.plage.dto.LocataireDto;
+import com.projet.plage.entity.Concessionnaire;
 import com.projet.plage.entity.Locataire;
 import com.projet.plage.entity.Role;
 import com.projet.plage.entity.User;
+import com.projet.plage.mapper.ConcessionnaireMapper;
 import com.projet.plage.mapper.LocataireMapper;
+import com.projet.plage.service.IConcessionnaireService;
 import com.projet.plage.service.ILienDeParenteService;
 import com.projet.plage.service.ILocataireService;
 import com.projet.plage.service.IPaysService;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Builder
-
+@Slf4j
 @AllArgsConstructor
 public class AuthenticationService {
 
 	private final UserRepository userRepository;
 	
+	private final ConcessionnaireDao concessionnaireDao;
+	
 	private final ILocataireService iLocataireService;
+	private final LocataireDao locataireDao;
 	
 	private final LocataireMapper locataireMapper;
 	
+	private final IConcessionnaireService iConcessionnaireService;
+	private final ConcessionnaireMapper concessionnaireMapper;
+	
 	private final PasswordEncoder passwordEncoder;
     private final JwtService jwtService;
-    private  AuthenticationManager authenticationManager;
+    private final  AuthenticationManager authenticationManager;
     private final IPaysService iPaysService;
     private final ILienDeParenteService iLienDeParenteService;
     
@@ -65,14 +77,16 @@ public class AuthenticationService {
 				.nom(request.getNom())
 				.prenom(request.getPrenom())
 				.email(request.getEmail())
-				.password(request.getPassword())
+				.password(passwordEncoder.encode(request.getPassword()))
 				.pays(iPaysService.recupererPaysParNom(request.getPays()))
 				.lienDeParente(iLienDeParenteService.recupererLienDeParenteParNom(request.getLienDeParente()))
 		.role(Role.LOCATAIRE)
 		.build();
 				
-		iLocataireService.ajouterLocataire(locataireDto);
+	//	iLocataireService.ajouterLocataire(locataireDto);
 		Locataire locataire = locataireMapper.toEntity(locataireDto);
+		
+		locataireDao.save(locataire);
 		
 		var jwtToken= jwtService.generateToken(locataire);
 		
@@ -82,6 +96,34 @@ public class AuthenticationService {
 		
 	}
 
+	
+	public AuthenticationResponse registerConcessionnaire(ConcessionnaireInscriptionRequest request) {
+		
+		var concessionnaireDto=ConcessionnaireDto.builder()
+				.nom(request.getNom())
+				.prenom(request.getPrenom())
+				.email(request.getEmail())
+				.password(passwordEncoder.encode(request.getPassword()))
+				.numeroDeTelephone(request.getNumeroDeTelephone())
+				.role(Role.CONCESSIONNAIRE)
+				.build();
+		
+	/*	ConcessionnaireDto concessionnaireDto= new ConcessionnaireDto(null, request.getNom(), request.getPrenom(), request.getEmail(), request.getNumeroDeTelephone(),passwordEncoder.encode(request.getPassword()), Role.CONCESSIONNAIRE);
+		
+		System.out.println(request.getPassword());
+		System.out.println("password: "+concessionnaireDto.getPassword());
+		System.out.println("telephone "+concessionnaireDto.getNumeroDeTelephone());
+		//iConcessionnaireService.ajouterConcessionnaire(concessionnaireDto);*/
+		Concessionnaire concessionnaire=concessionnaireMapper.toEntity(concessionnaireDto);
+	//	System.out.println(concessionnaire);
+		//log.warn(concessionnaire.toString());
+		concessionnaireDao.save(concessionnaire);
+		var jwtToken=jwtService.generateToken(concessionnaire);
+		
+		return AuthenticationResponse.builder()
+				.token(jwtToken)
+				.build();
+	}
 	public AuthenticationResponse authenticate(AuthenticationRequest request) {
 		
 		authenticationManager.authenticate(
@@ -104,22 +146,46 @@ public class AuthenticationService {
 	}
 	
 	public AuthenticationResponse authenticateLocataire(AuthenticationRequest request) {
-		System.out.println(request.getEmail());
-		System.out.println(request.getPassword());
-	
 		
+		
+	
+		authenticationManager.authenticate(
+				new UsernamePasswordAuthenticationToken(
+						request.getEmail(), 
+						request.getPassword()
+						)
+				);
+		
+		System.out.println(request.getEmail());
 	    Locataire locataire=iLocataireService.recupererLocataireParEmail(request.getEmail());
-	    System.out.println(locataire.getEmail());
-	    System.out.println(locataire);
+	    
 	    var jwtToken= jwtService.generateToken(locataire);
 	    
 	    
-	    System.out.println(jwtToken);
+	
 		return AuthenticationResponse.builder()
 				.token(jwtToken)
 				.build();
 		
 		
+	}
+	
+	public AuthenticationResponse authenticateConcessionnaire(AuthenticationRequest request) {
+		
+		authenticationManager.authenticate(
+				new UsernamePasswordAuthenticationToken(
+						request.getEmail(), 
+						request.getPassword()
+						)
+				);
+		System.out.println(request.getEmail());
+		Concessionnaire concessionnaire= iConcessionnaireService.recupererParEmail(request.getEmail());
+		
+		var jwtToken= jwtService.generateToken(concessionnaire);
+		
+		return AuthenticationResponse.builder()
+				.token(jwtToken)
+				.build();
 	}
 
 }

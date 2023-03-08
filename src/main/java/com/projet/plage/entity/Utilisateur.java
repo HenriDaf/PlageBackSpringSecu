@@ -39,13 +39,8 @@ import lombok.experimental.FieldDefaults;
 @Table(name="utilisateur")
 @Inheritance(strategy=InheritanceType.TABLE_PER_CLASS)
 public abstract class Utilisateur implements UserDetails { 	
-//
-//	/**
-//	 * 
-//	 */
-//	private static final long serialVersionUID = SpringSecurityCoreVersion.SERIAL_VERSION_UID;
 
-	
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

@@ -122,7 +122,7 @@ public class LocationControllerRest {
 	public ResponseEntity<List<Location>> getAllLocation() {
 
 		List<Location> locations = locationService.recupererLesLocations();
-
+System.out.println(locations);
 		if (locations.isEmpty()) {
 			return ResponseEntity.badRequest().body(null);
 		}

@@ -74,7 +74,7 @@ public class Concessionnaire extends Utilisateur {
 	@Override
 	public String getUsername() {
 
-		return null;
+		return email;
 	}
 
 
@@ -83,7 +83,7 @@ public class Concessionnaire extends Utilisateur {
 	@Override
 	public boolean isAccountNonExpired() {
 
-		return false;
+		return true;
 	}
 
 
@@ -92,7 +92,7 @@ public class Concessionnaire extends Utilisateur {
 	@Override
 	public boolean isAccountNonLocked() {
 
-		return false;
+		return true;
 	}
 
 
@@ -101,7 +101,7 @@ public class Concessionnaire extends Utilisateur {
 	@Override
 	public boolean isCredentialsNonExpired() {
 
-		return false;
+		return true;
 	}
 
 
@@ -110,7 +110,7 @@ public class Concessionnaire extends Utilisateur {
 	@Override
 	public boolean isEnabled() {
 
-		return false;
+		return true;
 	}
 
 
