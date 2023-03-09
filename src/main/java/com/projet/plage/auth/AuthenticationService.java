@@ -99,16 +99,16 @@ public class AuthenticationService {
 	
 	public AuthenticationResponse registerConcessionnaire(ConcessionnaireInscriptionRequest request) {
 		
-		var concessionnaireDto=ConcessionnaireDto.builder()
+		/*var concessionnaireDto=ConcessionnaireDto.builder()
 				.nom(request.getNom())
 				.prenom(request.getPrenom())
 				.email(request.getEmail())
 				.password(passwordEncoder.encode(request.getPassword()))
 				.numeroDeTelephone(request.getNumeroDeTelephone())
 				.role(Role.CONCESSIONNAIRE)
-				.build();
+				.build();*/
 		
-	/*	ConcessionnaireDto concessionnaireDto= new ConcessionnaireDto(null, request.getNom(), request.getPrenom(), request.getEmail(), request.getNumeroDeTelephone(),passwordEncoder.encode(request.getPassword()), Role.CONCESSIONNAIRE);
+		ConcessionnaireDto concessionnaireDto= new ConcessionnaireDto(null, request.getNom(), request.getPrenom(), request.getEmail(), request.getNumeroDeTelephone(),passwordEncoder.encode(request.getPassword()), Role.CONCESSIONNAIRE);
 		
 		System.out.println(request.getPassword());
 		System.out.println("password: "+concessionnaireDto.getPassword());

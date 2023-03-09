@@ -17,7 +17,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -70,6 +70,7 @@ public class Location {
 	@JoinColumn(name="id_concessionnaire")
 	@ManyToOne
 	@NotNull(message="Le champ ne peut pas être null")
+	@JsonIgnore
 	private Concessionnaire concessionnaire;
 	
 	/**

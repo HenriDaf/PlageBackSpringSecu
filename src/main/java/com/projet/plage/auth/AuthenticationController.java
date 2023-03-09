@@ -71,6 +71,7 @@ public class AuthenticationController {
 		
 	}
 	
+	
 	@PostMapping("/authentificationConcessionnaire")
 	public ResponseEntity<AuthenticationResponse> authenticateConcessionnaire(@RequestBody AuthenticationRequest request){
 		

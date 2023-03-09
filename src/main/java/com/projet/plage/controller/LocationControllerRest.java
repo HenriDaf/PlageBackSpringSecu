@@ -125,6 +125,8 @@ public class LocationControllerRest {
 System.out.println(locations);
 		if (locations.isEmpty()) {
 			return ResponseEntity.badRequest().body(null);
+			
+			//TODO modifier ce comportement pour pouvoir afficher un message Aucune location plutot que l'erreur 400;
 		}
 
 		return ResponseEntity.ok(locations);

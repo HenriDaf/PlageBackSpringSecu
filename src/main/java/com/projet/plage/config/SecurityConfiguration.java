@@ -23,8 +23,10 @@ public class SecurityConfiguration {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		
-		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/**", "/api/locations/liste-location"};
-		String[]pathAngular=new String[] {"/recupererListeConcessionnaire","/creationLocataire"};
+		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/locations/liste-location"};
+		//String[]pathArray= new String[] {"/api/v1/auth/**"};
+		String[]pathAngular=new String[] {"/api/recupererListeConcessionnaire","/creationLocataire", "/api/locations/create"};
+		String[]pathConcessionnaire=new String[] {"/api/recupererListeLocataire"};
 		String[]swaggerArray=new String[] {
 				"/v3/api-docs",
 	            "/swagger-ui/**",
@@ -42,6 +44,8 @@ public class SecurityConfiguration {
 		.permitAll()
 		.anyRequest()
 		.authenticated()
+		/*.antMatchers(pathConcessionnaire)
+		.hasAuthority("CONCESSIONNAIRE")*/
 		.and()
 		.sessionManagement()
 		.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
@@ -49,7 +53,6 @@ public class SecurityConfiguration {
 		.authenticationProvider(authenticationProvider)
 		.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 		
-		httpSecurity.cors();
 		return httpSecurity.build();
 	}
 }
