@@ -23,9 +23,9 @@ public class SecurityConfiguration {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		
-		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/locations/liste-location"};
+		String[]pathArray= new String[] {"/api/v1/auth/**"};
 		//String[]pathArray= new String[] {"/api/v1/auth/**"};
-		String[]pathAngular=new String[] {"/api/recupererListeConcessionnaire","/creationLocataire", "/api/locations/create"};
+		String[]pathAngular=new String[] {"/api/recupererListeConcessionnaire","/creationLocataire", "/api/locations/create","concessionnaire/liste-location/traitement", "/api/**", "/api/locations/locataireMail/**"};
 		String[]pathConcessionnaire=new String[] {"/api/recupererListeLocataire"};
 		String[]swaggerArray=new String[] {
 				"/v3/api-docs",
@@ -36,22 +36,24 @@ public class SecurityConfiguration {
 		.csrf()
 		.disable()
 		.authorizeHttpRequests()
-		.antMatchers(swaggerArray)
+		/*.antMatchers(swaggerArray)
 		.permitAll()
 		.antMatchers(pathAngular)
 		.permitAll()
 		.antMatchers(pathArray)
 		.permitAll()
 		.anyRequest()
-		.authenticated()
+		.authenticated()*/
+		.anyRequest()
+		.permitAll()
 		/*.antMatchers(pathConcessionnaire)
 		.hasAuthority("CONCESSIONNAIRE")*/
 		.and()
 		.sessionManagement()
-		.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-		.and()
+		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		/*.and()
 		.authenticationProvider(authenticationProvider)
-		.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
+		.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);*/
 		
 		return httpSecurity.build();
 	}

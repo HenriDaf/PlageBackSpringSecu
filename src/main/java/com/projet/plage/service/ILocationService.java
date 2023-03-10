@@ -25,6 +25,8 @@ public interface ILocationService {
 	 
 	 List<Location> trouverLocationsParIdLocataire(Long id);
 	 
+	 List<Location>trouverLocationsParEmailLocataire(String email);
+	 
 	 Location trouverLocationParId(Long id);
 	 
 	 List<Location>trouverLocationsParStatut(Long id);

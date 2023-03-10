@@ -52,7 +52,7 @@ public class ParasolControllerRest {
 	}
 
 	
-	@GetMapping("parasolsNonReserves")
+	@GetMapping("/parasolsNonReserves")
 	public ResponseEntity<List<Parasol>> recupererParasolNonReserves(){
 		
 		

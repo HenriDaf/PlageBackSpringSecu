@@ -117,6 +117,13 @@ public class LocationControllerRest {
 
 		return ResponseEntity.ok(location);
 	}
+	
+	@GetMapping("/locations/locataireMail/{email}")
+	public ResponseEntity<List<Location>> getLocationByLocataireMail(@PathVariable String email){
+		List<Location> location=locationService.trouverLocationsParEmailLocataire(email);
+		
+		return ResponseEntity.ok(location);
+		}
 
 	@GetMapping("/locations/liste-location")
 	public ResponseEntity<List<Location>> getAllLocation() {

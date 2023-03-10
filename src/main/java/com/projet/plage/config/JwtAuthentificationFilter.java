@@ -29,9 +29,12 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 	@Override
 	protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response,
 			@NonNull FilterChain filterChain) throws ServletException, IOException {
+		
+		System.out.println();
+		System.out.println("--------------------------------------------------------------------------------------------");
 
 		final String authHeader = request.getHeader("Authorization");
-	System.out.println(authHeader);
+	System.out.println("authHeader: "+authHeader);
 		final String jwt;
 		final String userEmail;
 		if(authHeader  == null || !authHeader.startsWith("Bearer ")) {
@@ -40,14 +43,14 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 		}
 		
 		jwt= authHeader.substring(7);
-		System.out.println(jwt);
+		System.out.println("jwt: "+jwt);
 		userEmail= jwtService.extractUsername(jwt); //extract userEmail from JWT token;
-		System.out.println(userEmail);
+		System.out.println("userEmail: "+userEmail);
 		
 		if(userEmail != null && SecurityContextHolder.getContext().getAuthentication()==null) {
 			UserDetails userDetails= this.userDetailsService.loadUserByUsername(userEmail);
-			System.out.println(userDetails.getAuthorities());
-			System.out.println(jwtService.isTokenValid(jwt, userDetails));
+			System.out.println("authorities: "+userDetails.getAuthorities());
+			System.out.println("isValid: "+jwtService.isTokenValid(jwt, userDetails));
 			if(jwtService.isTokenValid(jwt, userDetails)) {
 				UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
 						userDetails,
@@ -56,7 +59,9 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 						);
 				
 				authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-				System.out.println(authenticationToken);
+				System.out.println("authenti token "+authenticationToken);
+
+				System.out.println();
 				SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 			}
 		}

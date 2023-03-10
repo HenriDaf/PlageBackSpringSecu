@@ -45,7 +45,7 @@ public class Parasol {
 	private File file;	
 	
 	@JsonIgnore
-	@ManyToMany(mappedBy = "listeParasol", fetch=FetchType.LAZY)	
+	@ManyToMany(mappedBy = "listeParasol", fetch=FetchType.EAGER)	
 	@ToString.Exclude
 	private List<Location> locations;
 

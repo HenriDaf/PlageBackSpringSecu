@@ -3,20 +3,26 @@ package com.projet.plage.service.impl;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+
+
 import org.springframework.stereotype.Service;
 
+import com.projet.plage.dao.LocataireDao;
 import com.projet.plage.dao.LocationDao;
 import com.projet.plage.dto.LocationDto;
 import com.projet.plage.entity.Location;
 import com.projet.plage.mapper.LocationMapper;
 import com.projet.plage.service.ILocationService;
 
+import lombok.AllArgsConstructor;
+
 @Service
+@AllArgsConstructor
 public class LocationServiceImpl implements ILocationService {
 	
-	@Autowired
+	
 	private LocationDao locationDao;
+	private LocataireDao locataireDao;
 	private LocationMapper locationMapper;
 	
 	@Override
@@ -73,6 +79,11 @@ public class LocationServiceImpl implements ILocationService {
 	 */
 	public List<Location> trouverLocationsParStatut(Long id) {		
 		return locationDao.findLocationsByIdStatut(id);
+	}
+	@Override
+	public List<Location> trouverLocationsParEmailLocataire(String email) {
+
+		return locationDao.findAllByLocataire(locataireDao.findByEmail(email));
 	}
 	
 

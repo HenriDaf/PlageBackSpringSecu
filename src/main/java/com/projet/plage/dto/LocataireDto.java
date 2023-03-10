@@ -23,6 +23,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 @Getter
@@ -32,6 +33,7 @@ import lombok.experimental.FieldDefaults;
 @RequiredArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
+@ToString
 public class LocataireDto {
 
 	

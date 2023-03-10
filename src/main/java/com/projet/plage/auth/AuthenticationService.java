@@ -6,6 +6,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.projet.plage.config.JwtService;
 import com.projet.plage.dao.ConcessionnaireDao;
@@ -83,7 +84,12 @@ public class AuthenticationService {
 		.role(Role.LOCATAIRE)
 		.build();
 				
-	//	iLocataireService.ajouterLocataire(locataireDto);
+		
+		/*LocataireDto locataireDto= new LocataireDto(null, request.getNom(), request.getPrenom(), request.getEmail(), request.getPassword(),iLienDeParenteService.recupererLienDeParenteParNom(request.getLienDeParente()), iPaysService.recupererPaysParNom(request.getPays()), Role.LOCATAIRE);
+	//LocataireDto locataireDto= new LocataireDto(null, null, null, null, null, null, null, null);
+		locataire.setRole(Role.LOCATAIRE);*/
+		
+		//	iLocataireService.ajouterLocataire(locataireDto);
 		Locataire locataire = locataireMapper.toEntity(locataireDto);
 		
 		locataireDao.save(locataire);

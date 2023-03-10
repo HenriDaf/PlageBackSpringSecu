@@ -14,6 +14,7 @@ import com.projet.plage.entity.Location;
 public interface LocationDao extends JpaRepository<Location, Long> {
 	
 	public Optional<Location> findById(Long id);
+
 	
 
 	List<Location> findAllByLocataire(Locataire locataire);
@@ -50,5 +51,8 @@ public interface LocationDao extends JpaRepository<Location, Long> {
     )
     List<Location> findLocationsByIdStatut(Long id);
 
+	
+	
+	
 
 }
