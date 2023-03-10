@@ -4112,3 +4112,4 @@ Caused by: java.lang.Error: Unresolved compilation problem:
 	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.25.jar:5.3.25]
 	... 42 common frames omitted
 
+2023-03-10 15:17:54.069  WARN 15404 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
