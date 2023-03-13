@@ -23,7 +23,7 @@ public class SecurityConfiguration {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		
-		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/**","/api/locations/locataireMail/**"};
+		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/**"};
 		String[]swaggerArray=new String[] {
 				"/v3/api-docs",
 				"/swagger-ui/**",

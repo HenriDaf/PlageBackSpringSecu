@@ -31,12 +31,12 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response,
 			@NonNull FilterChain filterChain) throws ServletException, IOException {
 		
-		log.info("");
-		log.info("");
-		log.info("--------------------------------------------------------------------------------------------");
-		log.info(request.toString());
+		log.debug("");
+		log.debug("");
+		log.debug("--------------------------------------------------------------------------------------------");
+		log.debug(request.toString());
 		final String authHeader = request.getHeader("Authorization");
-	log.info("authHeader: "+authHeader);
+		log.debug("authHeader: "+authHeader);
 		final String jwt;
 		final String userEmail;
 		if(authHeader  == null || !authHeader.startsWith("Bearer ")) {
@@ -45,15 +45,15 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 		}
 		
 		jwt= authHeader.substring(7);
-		log.info("jwt: "+jwt);
+		//log.info("jwt: "+jwt);
 		userEmail= jwtService.extractUsername(jwt); //extract userEmail from JWT token;
-		log.info("userEmail: "+userEmail);
+		log.debug("userEmail: "+userEmail);
 		
 		if(userEmail != null && SecurityContextHolder.getContext().getAuthentication()==null) {
 			UserDetails userDetails= this.userDetailsService.loadUserByUsername(userEmail);
-			log.info("authorities: "+userDetails.getAuthorities());
+			log.debug("authorities: "+userDetails.getAuthorities());
 	
-			log.info("isValid: "+jwtService.isTokenValid(jwt, userDetails));
+			log.debug("isValid: "+jwtService.isTokenValid(jwt, userDetails));
 			if(jwtService.isTokenValid(jwt, userDetails)) {
 				UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
 						userDetails,
@@ -64,7 +64,7 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 				authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
 				//System.out.println("authenti token "+authenticationToken);
 
-				log.info("");
+				log.debug("");
 				SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 			}
 		}
