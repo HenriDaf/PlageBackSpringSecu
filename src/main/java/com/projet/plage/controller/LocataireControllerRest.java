@@ -3,8 +3,11 @@ package com.projet.plage.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.security.RolesAllowed;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,7 +46,8 @@ public class LocataireControllerRest {
 	 * la liste de locataire, il n'y aura pas le mot de passe.
 	 */
 	
-	
+	//@PreAuthorize("#'Granted Authorities'==CONCESSIONNAIRE")
+	@PreAuthorize("hasAuthority('CONCESSIONNAIRE')")
 	@GetMapping("recupererListeLocataire")
 	@ResponseStatus(code = HttpStatus.OK)
 	@Operation(description = "récupération de la liste des locataires")

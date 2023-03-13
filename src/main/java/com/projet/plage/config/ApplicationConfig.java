@@ -6,6 +6,7 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -19,6 +20,11 @@ import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 
 @Configuration
+@EnableGlobalMethodSecurity(
+		prePostEnabled = true,
+		securedEnabled = true,
+		jsr250Enabled = true
+		)
 
 @AllArgsConstructor
 public class ApplicationConfig {
@@ -43,6 +49,7 @@ public class ApplicationConfig {
 			}
 			if (locataireDao.findByEmail(username) != null) {
 				System.out.println(2);
+				System.out.println(locataireDao.findByEmail(username));
 				return locataireDao.findByEmail(username);
 			}
 			return null;
@@ -62,6 +69,7 @@ public class ApplicationConfig {
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
 		authenticationProvider.setUserDetailsService(userDetailsService());
 		authenticationProvider.setPasswordEncoder(passwordEncoder());
+		System.out.println("authenticationProvider "+authenticationProvider);
 		return authenticationProvider;
 
 	}
@@ -69,6 +77,7 @@ public class ApplicationConfig {
 	@Bean
 	public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
 			throws Exception {
+		System.out.println("authenticationMananger "+ authenticationConfiguration.getAuthenticationManager());
 		return authenticationConfiguration.getAuthenticationManager();
 	}
 

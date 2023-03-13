@@ -6,6 +6,7 @@ import java.util.List;
 import org.json.JSONArray;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,7 +39,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 @RequestMapping("/api")
 @Validated
-@CrossOrigin(origins = "http://localhost:4200/", maxAge = 3600)
+@CrossOrigin(origins = "http://localhost:4200/")
 public class LocationControllerRest {
 
 	private final ILocationService locationService;
@@ -118,6 +119,7 @@ public class LocationControllerRest {
 		return ResponseEntity.ok(location);
 	}
 	
+	@PreAuthorize("hasAuthority('LOCATAIRE')")
 	@GetMapping("/locations/locataireMail/{email}")
 	public ResponseEntity<List<Location>> getLocationByLocataireMail(@PathVariable String email){
 		List<Location> location=locationService.trouverLocationsParEmailLocataire(email);
@@ -125,6 +127,7 @@ public class LocationControllerRest {
 		return ResponseEntity.ok(location);
 		}
 
+	//@PreAuthorize("hasAuthority('CONCESSIONNAIRE')")
 	@GetMapping("/locations/liste-location")
 	public ResponseEntity<List<Location>> getAllLocation() {
 
@@ -139,6 +142,7 @@ System.out.println(locations);
 		return ResponseEntity.ok(locations);
 	}
 
+	@PreAuthorize("hasAuthority('CONCESSIONNAIRE')")
 	@GetMapping("/locations/liste-statut/traitement")
 	public ResponseEntity<List<Location>> getLocationByStatutATraiter() {
 		String nom = "à traiter";
@@ -153,6 +157,7 @@ System.out.println(locations);
 		return ResponseEntity.ok(locations);
 	}
 
+	
 	@PatchMapping("/locations/location/{id}")
 	public ResponseEntity<Location> getModifierStatutLocation(@PathVariable String id,
 			@RequestBody ObjectNode objectNode) {

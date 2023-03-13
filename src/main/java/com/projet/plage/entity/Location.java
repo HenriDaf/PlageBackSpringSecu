@@ -30,7 +30,7 @@ import lombok.ToString;
 @Setter
 @RequiredArgsConstructor
 @AllArgsConstructor
-@ToString(callSuper = false)
+@ToString()
 
 public class Location {
 	
@@ -57,6 +57,7 @@ public class Location {
 	private Locataire locataire;
 	
 	@ManyToMany	
+	@ToString.Exclude
 	@JoinTable(name = "location_parasol")
 	//@NotNull(message="Le champ ne peut pas être null")
 	@NotEmpty(message="La liste des parasols ne peut pas être vide")

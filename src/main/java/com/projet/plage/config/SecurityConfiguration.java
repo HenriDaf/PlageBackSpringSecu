@@ -23,37 +23,49 @@ public class SecurityConfiguration {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		
-		String[]pathArray= new String[] {"/api/v1/auth/**"};
-		//String[]pathArray= new String[] {"/api/v1/auth/**"};
-		String[]pathAngular=new String[] {"/api/recupererListeConcessionnaire","/creationLocataire", "/api/locations/create","concessionnaire/liste-location/traitement", "/api/**", "/api/locations/locataireMail/**"};
-		String[]pathConcessionnaire=new String[] {"/api/recupererListeLocataire"};
+		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/**","/api/locations/locataireMail/**"};
 		String[]swaggerArray=new String[] {
 				"/v3/api-docs",
-	            "/swagger-ui/**",
-	            "/v3/api-docs/swagger-config"
-				};
+				"/swagger-ui/**",
+				"/v3/api-docs/swagger-config"
+		};
+		
+		
+		
+		//String[]pathArray= new String[] {"/api/v1/auth/**"};
+		String[]pathAngular=new String[] {"/api/recupererListeConcessionnaire","/creationLocataire", "/api/locations/create","concessionnaire/liste-location/traitement", "/api/**"};
+		String[]pathConcessionnaire=new String[] {"/api/recupererListeLocataire","/api/locations/liste-location ","/api/locations/liste-location"};
+		String[]pathLocataire=new String[] {"/api/locations/locataireMail/**"};
+		
+		
+		
 		httpSecurity
 		.csrf()
 		.disable()
+		
 		.authorizeHttpRequests()
-		/*.antMatchers(swaggerArray)
-		.permitAll()
-		.antMatchers(pathAngular)
+		.antMatchers("/api/locations/locataireMail/**").permitAll()
+		//.antMatchers(pathConcessionnaire).hasAuthority("CONCESSIONNAIRE")
+		//.antMatchers(pathLocataire).hasAuthority("LOCATAIRE")
+		.antMatchers(swaggerArray)
 		.permitAll()
 		.antMatchers(pathArray)
 		.permitAll()
+		//.antMatchers(pathConcessionnaire).permitAll()//.hasAuthority("CONCESSIONNAIRE")
+		//.antMatchers(pathLocataire).permitAll()//.hasAuthority("LOCATAIRE")
 		.anyRequest()
-		.authenticated()*/
-		.anyRequest()
-		.permitAll()
+		.authenticated()
+		//.anyRequest()
+		//.permitAll()
 		/*.antMatchers(pathConcessionnaire)
 		.hasAuthority("CONCESSIONNAIRE")*/
 		.and()
+		.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
 		.sessionManagement()
-		.sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-		/*.and()
-		.authenticationProvider(authenticationProvider)
-		.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);*/
+		.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+		.and()
+		.authenticationProvider(authenticationProvider);
+		
 		
 		return httpSecurity.build();
 	}
