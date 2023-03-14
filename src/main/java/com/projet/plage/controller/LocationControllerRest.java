@@ -3,7 +3,6 @@ package com.projet.plage.controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.json.JSONArray;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -122,9 +121,13 @@ public class LocationControllerRest {
 	@PreAuthorize("hasAuthority('LOCATAIRE')")
 	@GetMapping("/locations/locataireMail/{email}")
 	public ResponseEntity<List<Location>> getLocationByLocataireMail(@PathVariable String email){
-		List<Location> location=locationService.trouverLocationsParEmailLocataire(email);
+		List<Location> locations=locationService.trouverLocationsParEmailLocataire(email);
 		
-		return ResponseEntity.ok(location);
+		if(locations.isEmpty()) {
+			return ResponseEntity.badRequest().body(null);
+		}
+	
+		return ResponseEntity.ok(locations);
 		}
 
 	@PreAuthorize("hasAuthority('CONCESSIONNAIRE')")
