@@ -1,6 +1,7 @@
 package com.projet.plage.initialisation;
 
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
 import com.projet.plage.dao.ConcessionnaireDao;
@@ -16,7 +17,10 @@ import com.projet.plage.entity.File;
 import com.projet.plage.entity.LienDeParente;
 import com.projet.plage.entity.Parasol;
 import com.projet.plage.entity.Pays;
+import com.projet.plage.entity.Role;
 import com.projet.plage.entity.Statut;
+import com.projet.plage.mapper.ConcessionnaireMapper;
+import com.projet.plage.mapper.LocataireMapper;
 import com.projet.plage.service.IConcessionnaireService;
 import com.projet.plage.service.ILienDeParenteService;
 import com.projet.plage.service.ILocataireService;
@@ -55,13 +59,18 @@ public class AjoutDonneesInitiales implements CommandLineRunner {
 
 	ConcessionnaireDao concessionnaireDao;
 	IConcessionnaireService iConcessionnaireService;
+	ConcessionnaireMapper concessionnaireMapper;
 
 	ParasolDao parasolDao;
 
 	LocataireDao locataireDao;
+	LocataireMapper locataireMapper;
+	
 	ILocataireService iLocataireService;
 	ILienDeParenteService iLienDeParenteService;
 	IPaysService iPaysService;
+	
+	PasswordEncoder passwordEncoder;
 
 	@Override
 	public void run(String... args) throws Exception {
@@ -151,17 +160,22 @@ public class AjoutDonneesInitiales implements CommandLineRunner {
 
 	public void ajouterConcessionnaire() {
 		if (concessionnaireDao.count() == 0) {
-			concessionnaireDao.save(iConcessionnaireService.ajouterConcessionnaire(
-					new ConcessionnaireDto("Doe", "John", "peppe@orsys.fr", "12345678", "+3912345678")));
-
+		
+			
+		//	concessionnaireDao.save(iConcessionnaireService.ajouterConcessionnaire(
+				//	new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", passwordEncoder.encode("12345678"), Role.CONCESSIONNAIRE)));
+		
+			
+			concessionnaireDao.save(concessionnaireMapper.toEntity(new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", passwordEncoder.encode("12345678"), Role.CONCESSIONNAIRE)));
+		
 		}
 	}
 
 	public void ajouterLocataire() {
 		if (locataireDao.count() == 0) {
-			locataireDao.save(iLocataireService.ajouterLocataire(
-					new LocataireDto("test", "test", "test@orsys.fr", "12345678", iLienDeParenteService.recupererLienDeParenteParNom("aucun"), iPaysService.recupererPaysParNom("France") )));
-
+		//	locataireDao.save(iLocataireService.ajouterLocataire(
+			//		new LocataireDto(null,"test", "test", "test@orsys.fr",passwordEncoder.encode("12345678"),iLienDeParenteService.recupererLienDeParenteParNom("aucun"), iPaysService.recupererPaysParNom("France"), Role.LOCATAIRE )));
+			locataireDao.save(locataireMapper.toEntity(new LocataireDto(null,"test", "test", "test@orsys.fr",passwordEncoder.encode("12345678"),iLienDeParenteService.recupererLienDeParenteParNom("aucun"), iPaysService.recupererPaysParNom("France"), Role.LOCATAIRE )));
 		}
 	}
 

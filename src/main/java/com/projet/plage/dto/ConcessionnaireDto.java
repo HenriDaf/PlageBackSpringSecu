@@ -18,6 +18,7 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
 import lombok.experimental.FieldDefaults;
 
 @Getter
@@ -25,7 +26,7 @@ import lombok.experimental.FieldDefaults;
 @Builder
 @NoArgsConstructor
 @RequiredArgsConstructor
-
+@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ConcessionnaireDto {
 

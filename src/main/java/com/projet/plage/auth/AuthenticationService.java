@@ -115,7 +115,7 @@ public class AuthenticationService {
 				.build();*/
 		
 		ConcessionnaireDto concessionnaireDto= new ConcessionnaireDto(null, request.getNom(), request.getPrenom(), request.getEmail(), request.getNumeroDeTelephone(),passwordEncoder.encode(request.getPassword()), Role.CONCESSIONNAIRE);
-		
+		System.out.println(concessionnaireDto);
 		System.out.println(request.getPassword());
 		System.out.println("password: "+concessionnaireDto.getPassword());
 		System.out.println("telephone "+concessionnaireDto.getNumeroDeTelephone());
