@@ -12,8 +12,10 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -41,7 +43,7 @@ import lombok.experimental.FieldDefaults;
 public class Locataire extends Utilisateur {
 
 	
-
+	
 	private static final long serialVersionUID = 1L;
 
 	@Setter(value = AccessLevel.NONE)

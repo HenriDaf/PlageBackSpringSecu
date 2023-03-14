@@ -77,22 +77,11 @@ public class LocataireServiceImpl implements ILocataireService {
 
 	@Override
 	public Locataire ajouterLocataire(LocataireDto locataireDto) {
+		//System.out.println("locataireDTO "+locataireDto);
 
 		if (locataireDto != null && locataireDao.findByEmail(locataireDto.getEmail()) == null) {
 			Locataire locataire=locataireMapper.toEntity(locataireDto);
-		ArrayList<Object> info=(iChiffrageService.genererChiffrage(locataire.getPassword()));
-			
-			if(info.size()==2) {
-				Salage salage = new Salage((byte[])info.get(1),locataire);				locataire.setPassword(info.get(0).toString());
-				iSalageService.ajouterSalage(salage);
-				locataire.setSalage(salage);
-				locataire.setPassword(info.get(0).toString());
-				return locataireDao.save(locataire);
-			}else {
-				throw new EchecCreationUtilisateurException("Echec lors de la création de l'utilisateur, veuillez recommencer ultérieurement");
-			}
-			
-			
+			return locataireDao.save(locataire);
 		} else {
 			throw new UtilisateurDejaExistantException(
 					"Cette adresse email existe déja, veuillez en choisir une autre");

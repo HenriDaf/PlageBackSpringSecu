@@ -9,7 +9,9 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
-
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.projet.plage.entity.LienDeParente;
 import com.projet.plage.entity.Pays;
@@ -36,9 +38,13 @@ import lombok.experimental.FieldDefaults;
 @ToString
 public class LocataireDto {
 
-	
+	@Bean
+	PasswordEncoder getEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+
 	Long id;
-	
+
 	@NonNull
 	@NotBlank(message = "Veuillez renseigner un nom")
 	String nom;
@@ -48,67 +54,56 @@ public class LocataireDto {
 	String prenom;
 
 	@NonNull
-	@NotBlank(message = "Veuillez renseigner une adresse mail")	
-	@Pattern(regexp="^([A-Za-z0-9-])+(.[A-Za-z0-9-]+)*@orsys.fr$", message="Votre adresse doit se terminer par @orsys.fr")
+	@NotBlank(message = "Veuillez renseigner une adresse mail")
+	@Pattern(regexp = "^([A-Za-z0-9-])+(.[A-Za-z0-9-]+)*@orsys.fr$", message = "Votre adresse doit se terminer par @orsys.fr")
 	String email;
 
 	@NonNull
 	@NotBlank(message = "Veuillez renseigner un mot de passe")
-	@Size(min=8, message = "Le mot de passe doit contenir au minimum 8 caractères")
+	@Size(min = 8, message = "Le mot de passe doit contenir au minimum 8 caractères")
 	String password;
 
-	
-	//LienDeParenteDto lienDeParenteDto;
+	// LienDeParenteDto lienDeParenteDto;
 	@NonNull
 	LienDeParente lienDeParente;
 
 	@NonNull
 	Pays pays;
-	//PaysDto paysDto;
-	
-	//ajout pour la partie location	
-	
+	// PaysDto paysDto;
+
+	// ajout pour la partie location
+
 	@Enumerated(EnumType.STRING)
 	Role role;
-	
+
 	/**
 	 * Constructeur pour la partie location
 	 */
 	List<LocationDto> listeLocationDto;
-	
 
-	public LocataireDto(Long id, String nom,
-			 String prenom,
-			 String email,
-			 LienDeParente lienDeParente,
-			 Pays pays) {
+	public LocataireDto(Long id, String nom, String prenom, String email, LienDeParente lienDeParente, Pays pays) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
-	
-		this.lienDeParente=lienDeParente;
-				this.pays=pays;
+
+		this.lienDeParente = lienDeParente;
+		this.pays = pays;
 	}
+
 	@Builder
-	public LocataireDto(Long id, String nom,
-			String prenom,
-			String email,
-			String password,
-			LienDeParente lienDeParente,
-			Pays pays,
-			Role role) {
+	public LocataireDto(Long id, String nom, String prenom, String email, String password, LienDeParente lienDeParente,
+			Pays pays, Role role) {
 		super();
 		this.id = id;
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
-		this.password=password;
-		this.lienDeParente=lienDeParente;
-		this.pays=pays;
-		this.role=role;
+		this.password = getEncoder().encode(password);
+		this.lienDeParente = lienDeParente;
+		this.pays = pays;
+		this.role = role;
 	}
-
 
 }

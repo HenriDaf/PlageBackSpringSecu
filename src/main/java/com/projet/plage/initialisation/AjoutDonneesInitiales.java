@@ -25,6 +25,7 @@ import com.projet.plage.service.IConcessionnaireService;
 import com.projet.plage.service.ILienDeParenteService;
 import com.projet.plage.service.ILocataireService;
 import com.projet.plage.service.IPaysService;
+import com.projet.plage.service.impl.LocataireServiceImpl;
 
 import lombok.AllArgsConstructor;
 
@@ -64,6 +65,7 @@ public class AjoutDonneesInitiales implements CommandLineRunner {
 	ParasolDao parasolDao;
 
 	LocataireDao locataireDao;
+	ILocataireService locataireService;
 	LocataireMapper locataireMapper;
 	
 	ILocataireService iLocataireService;
@@ -161,22 +163,16 @@ public class AjoutDonneesInitiales implements CommandLineRunner {
 	public void ajouterConcessionnaire() {
 		if (concessionnaireDao.count() == 0) {
 		
-			
-		//	concessionnaireDao.save(iConcessionnaireService.ajouterConcessionnaire(
-				//	new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", passwordEncoder.encode("12345678"), Role.CONCESSIONNAIRE)));
-		
 			iConcessionnaireService.ajouterConcessionnaire(new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", "12345678", Role.CONCESSIONNAIRE));
 			
-			//concessionnaireDao.save(concessionnaireMapper.toEntity(new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", "12345678", Role.CONCESSIONNAIRE)));
 		
 		}
 	}
 
 	public void ajouterLocataire() {
 		if (locataireDao.count() == 0) {
-		//	locataireDao.save(iLocataireService.ajouterLocataire(
-			//		new LocataireDto(null,"test", "test", "test@orsys.fr",passwordEncoder.encode("12345678"),iLienDeParenteService.recupererLienDeParenteParNom("aucun"), iPaysService.recupererPaysParNom("France"), Role.LOCATAIRE )));
-			locataireDao.save(locataireMapper.toEntity(new LocataireDto(null,"test", "test", "test@orsys.fr",passwordEncoder.encode("12345678"),iLienDeParenteService.recupererLienDeParenteParNom("aucun"), iPaysService.recupererPaysParNom("France"), Role.LOCATAIRE )));
+		
+			iLocataireService.ajouterLocataire(new LocataireDto(null,"test", "test", "test@orsys.fr","12345678",iLienDeParenteService.recupererLienDeParenteParNom("aucun"), iPaysService.recupererPaysParNom("France"), Role.LOCATAIRE ));
 		}
 	}
 
