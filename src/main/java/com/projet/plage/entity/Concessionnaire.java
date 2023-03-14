@@ -50,11 +50,10 @@ public class Concessionnaire extends Utilisateur {
 	
 	public Concessionnaire(@NonNull String nom, @NonNull String prenom, @NonNull String email,
 			@NonNull String password,@NotNull(message = "Merci de préciser le numéro de téléphone") 
-	@NotEmpty(message = "Le numéro de téléphone ne peut pas être vide")  String numeroDeTelephone,
-	Salage salage
+	@NotEmpty(message = "Le numéro de téléphone ne peut pas être vide")  String numeroDeTelephone
 
 		 ) {
-		super(nom, prenom, email, password, salage);
+		super(nom, prenom, email, password);
 		this.numeroDeTelephone = numeroDeTelephone;
 
 	}

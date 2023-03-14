@@ -7,21 +7,15 @@ import org.springframework.stereotype.Service;
 
 import com.projet.plage.dao.LocataireDao;
 import com.projet.plage.dao.LocationDao;
-import com.projet.plage.dao.SalageDao;
 import com.projet.plage.dto.LocataireDto;
 import com.projet.plage.entity.Locataire;
 import com.projet.plage.entity.Location;
-import com.projet.plage.entity.Salage;
-import com.projet.plage.exception.EchecCreationUtilisateurException;
 import com.projet.plage.exception.UtilisateurDejaExistantException;
 import com.projet.plage.exception.UtilisateurNonSupprimable;
 import com.projet.plage.exception.UtilisateurNonTrouveException;
 import com.projet.plage.mapper.LocataireMapper;
-import com.projet.plage.service.IChiffrageService;
 import com.projet.plage.service.ILocataireService;
-import com.projet.plage.service.ISalageService;
 
-import java.util.ArrayList;
 import java.util.Collections;
 
 import lombok.AllArgsConstructor;
@@ -31,11 +25,10 @@ import lombok.AllArgsConstructor;
 public class LocataireServiceImpl implements ILocataireService {
 
 	private LocataireDao locataireDao;
-	private SalageDao salageDao;
 	private LocataireMapper locataireMapper;
 	private LocationDao locationDao;
-	private IChiffrageService iChiffrageService;
-	private ISalageService iSalageService;
+
+	
 
 	@Override
 	public List<Locataire> recupererLocataire() {
@@ -54,26 +47,7 @@ public class LocataireServiceImpl implements ILocataireService {
 		return locataireDao.findByEmail(email);
 	}
 
-	@Override
-	public Locataire authentifierLocataireParEmailMotDePasse(String email, String password) {
 
-		Long idLocataire=locataireDao.findIdByEmail(email);
-		byte[] sel= salageDao.findSelByUtilisateur(idLocataire);
-		
-		if(sel!=null) {
-			String mdp=iChiffrageService.validitePassword(password, sel);
-			
-			if (locataireDao.findByEmailAndPassword(email,mdp) != null) {
-				return locataireDao.findByEmailAndPassword(email, mdp);
-			} else {
-				throw new UtilisateurNonTrouveException("Mot de passe et ou adresse email invalide");
-			}
-		} else {
-			throw new UtilisateurNonTrouveException("Mot de passe et ou adresse email invalide");
-		}
-		
-
-	}
 
 	@Override
 	public Locataire ajouterLocataire(LocataireDto locataireDto) {

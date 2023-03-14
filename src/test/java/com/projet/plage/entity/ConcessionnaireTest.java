@@ -35,8 +35,8 @@ class ConcessionnaireTest {
 	
 	@Test
 	void testerConstructeurAvecParametres() {
-		Salage salage= new Salage();
-		Concessionnaire concessionnaire = new Concessionnaire(nom,prenom,email,motdepasse,numeroDeTelephone,salage);
+
+		Concessionnaire concessionnaire = new Concessionnaire(nom,prenom,email,motdepasse,numeroDeTelephone);
 		
 		
 		assertEquals(numeroDeTelephone, concessionnaire.getNumeroDeTelephone());

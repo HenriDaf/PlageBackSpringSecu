@@ -1,6 +1,6 @@
 package com.projet.plage.entity;
 
-import javax.persistence.CascadeType;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,8 +10,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
@@ -69,10 +67,6 @@ public abstract class Utilisateur implements UserDetails {
 	/*@NonNull
 	byte[] sel;*/
 	
-	@NonNull
-	@OneToOne( cascade = CascadeType.ALL)
-	@JoinColumn(name="salage_id", referencedColumnName = "id")
-	Salage salage;
 	
 	@Enumerated(EnumType.STRING)
 	Role role;

@@ -69,45 +69,7 @@ public class ConcessionnaireControllerRest {
 	return concessionnairesDtos;
 	
 	}
-	/**
-	 * 
-	 * @param objectNode
-	 * @return
-	 * 
-	 * 
-	 * Méthode prenant en paramètre ObjectNode.
-	 * 
-	 * Cet object contiendra les données provenant du formulaire d'authentification coté front.
-	 * 
-	 * On récupèrera via la méthode get(), les champs email et password respectivement.
-	 * A l'aide de la méthode authentifierConcessionnaireParEmailMotDePasse() de l'interface IConcessionnaireService, on récupère
-	 * le concessionnaire conrrespondant.
-	 * 
-	 * On récupère tous les champs, sauf le mot de passe du concessionnaire, et on les attribut à un objet concessionnaireDto,
-	 * l'objet concessionnaireDto(ne possédant pas de mot de passe), sera renvoyé en réponse, ou un message d'erreur(exception générée pendant le processus).
-	 * 
-	 * Les exceptions pouvant etre déclenchées par l'utilisation des controleurs sont rassemblées dans la classe GestionControllerException.
-	 * 
-	 */
-	@PostMapping("authentifierConcessionnaire")
-	@ResponseStatus(code=HttpStatus.OK)
-	@Operation(description = "Authentification d'un concessionnaire")
-//	public Concessionnaire authentifierConcessionnaire(@RequestBody ObjectNode objectNode) {
-		public ResponseEntity<ConcessionnaireDto> authentifierConcessionnaire(@RequestBody ObjectNode objectNode) {
-		
-		
-		String email= objectNode.get("email").asText();
-		String motDePasse= objectNode.get("password").asText();
 	
-		Concessionnaire concessionnaire=iConcessionnaireService.authentifierConcessionnaireParEmailMotDePasse(email, motDePasse);
-		ConcessionnaireDto concessionnaireDto= new ConcessionnaireDto(concessionnaire.getId(), concessionnaire.getNom(), concessionnaire.getPrenom(), concessionnaire.getEmail(), concessionnaire.getNumeroDeTelephone());
-		
-		return ResponseEntity.ok(concessionnaireDto);
-		
-		
-		
-		//return iConcessionnaireService.authentifierConcessionnaireParEmailMotDePasse(email, motDePasse);
-	}
 
 	
 	@PostMapping("creationConcessionnaire")

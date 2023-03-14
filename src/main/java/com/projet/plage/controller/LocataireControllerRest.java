@@ -67,20 +67,7 @@ public class LocataireControllerRest {
 		
 	}
 	
-	@PostMapping("authentifierLocataire")
-	@ResponseStatus(code=HttpStatus.OK)
-	@Operation(description = "Authentification d'un locataire")
-	public ResponseEntity<LocataireDto> authentifierLocataire(@RequestBody ObjectNode objectNode) {
-		System.out.println(objectNode);
-		String email= objectNode.get("email").asText();
-		String motDePasse= objectNode.get("password").asText();
 		
-		Locataire locataire =  iLocataireService.authentifierLocataireParEmailMotDePasse(email, motDePasse);
-
-		LocataireDto locataireDto = new LocataireDto(locataire.getId(), locataire.getNom(), locataire.getPrenom(), locataire.getEmail(),locataire.getLienDeParente(), locataire.getPays());
-		return ResponseEntity.ok(locataireDto);
-		
-	}	
 	
 	@PostMapping("creationLocataire")
 	@ResponseStatus(code = HttpStatus.CREATED)

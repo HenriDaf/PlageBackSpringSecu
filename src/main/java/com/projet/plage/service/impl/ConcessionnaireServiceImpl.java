@@ -1,23 +1,16 @@
 package com.projet.plage.service.impl;
 
-import java.util.ArrayList;
+
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.projet.plage.dao.ConcessionnaireDao;
-import com.projet.plage.dao.SalageDao;
 import com.projet.plage.dto.ConcessionnaireDto;
 import com.projet.plage.entity.Concessionnaire;
-import com.projet.plage.entity.Salage;
-import com.projet.plage.exception.EchecCreationUtilisateurException;
 import com.projet.plage.exception.UtilisateurDejaExistantException;
-import com.projet.plage.exception.UtilisateurNonTrouveException;
 import com.projet.plage.mapper.ConcessionnaireMapper;
-import com.projet.plage.service.IChiffrageService;
 import com.projet.plage.service.IConcessionnaireService;
-import com.projet.plage.service.ISalageService;
-
 import lombok.AllArgsConstructor;
 
 @Service
@@ -25,9 +18,8 @@ import lombok.AllArgsConstructor;
 public class ConcessionnaireServiceImpl implements IConcessionnaireService {
 
 	private ConcessionnaireDao concessionnaireDao;
-	private SalageDao salageDao;
-	private IChiffrageService iChiffrageService;
-	private ISalageService iSalageService;
+
+	
 	private ConcessionnaireMapper concessionnaireMapper;
 
 	@Override
@@ -84,24 +76,6 @@ public class ConcessionnaireServiceImpl implements IConcessionnaireService {
 
 	}
 
-	@Override
-	public Concessionnaire authentifierConcessionnaireParEmailMotDePasse(String email, String password) {
-
-		Long idConcessionnaire = concessionnaireDao.findIdByEmail(email);
-		byte[] sel = salageDao.findSelByUtilisateur(idConcessionnaire);
-
-		if (sel != null) {
-			String mdp = iChiffrageService.validitePassword(password, sel);
-
-			if (concessionnaireDao.findByEmailAndPassword(email, mdp) != null) {
-				return concessionnaireDao.findByEmailAndPassword(email, mdp);
-			} else {
-				throw new UtilisateurNonTrouveException("Mot de passe et ou adresse email invalide");
-			}
-		} else {
-			throw new UtilisateurNonTrouveException("Mot de passe et ou adresse email invalide");
-		}
-
-	}
+	
 
 }
