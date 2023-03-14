@@ -165,8 +165,9 @@ public class AjoutDonneesInitiales implements CommandLineRunner {
 		//	concessionnaireDao.save(iConcessionnaireService.ajouterConcessionnaire(
 				//	new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", passwordEncoder.encode("12345678"), Role.CONCESSIONNAIRE)));
 		
+			iConcessionnaireService.ajouterConcessionnaire(new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", "12345678", Role.CONCESSIONNAIRE));
 			
-			concessionnaireDao.save(concessionnaireMapper.toEntity(new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", passwordEncoder.encode("12345678"), Role.CONCESSIONNAIRE)));
+			//concessionnaireDao.save(concessionnaireMapper.toEntity(new ConcessionnaireDto(null,"Doe", "John", "peppe@orsys.fr","+3912345678", "12345678", Role.CONCESSIONNAIRE)));
 		
 		}
 	}

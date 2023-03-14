@@ -8,6 +8,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+
 import com.projet.plage.entity.Role;
 
 import lombok.AccessLevel;
@@ -30,6 +35,11 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class ConcessionnaireDto {
 
+	@Bean
+	PasswordEncoder getEncoder() {
+		return new BCryptPasswordEncoder();
+	}
+	
 	Long id;
 	
 
@@ -83,8 +93,8 @@ public class ConcessionnaireDto {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.email = email;
-		this.numeroDeTelephone = numeroDeTelephone;
-		this.password=password;
+		this.numeroDeTelephone =numeroDeTelephone;
+		this.password=getEncoder().encode(password);
 		this.role=role;
 	}
 

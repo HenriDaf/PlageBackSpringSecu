@@ -1092,3 +1092,704 @@ java.lang.Error: Unresolved compilation problems:
 2023-03-14 11:31:45.331  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
 2023-03-14 11:31:45.745  INFO 10188 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
 2023-03-14 11:32:19.888  INFO 10188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-14 11:32:19.892  INFO 10188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2023-03-14 11:44:48.119  INFO 10188 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2023-03-14 11:44:48.144  INFO 10188 --- [Thread-39] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:44:48.535  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:44:48.566  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:44:48.639  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:44:48.656  INFO 10188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 339 ms
+2023-03-14 11:44:48.724  INFO 10188 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:44:48.829  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.829  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.829  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.829  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.831  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.831  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.831  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.831  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.831  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.831  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:44:48.834  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:44:48.914  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:44:49.183  INFO 10188 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25b18009, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7e3d599f, org.springframework.security.web.context.SecurityContextPersistenceFilter@e4a31cc, org.springframework.security.web.header.HeaderWriterFilter@452233d0, org.springframework.security.web.authentication.logout.LogoutFilter@69065a2a, com.projet.plage.config.JwtAuthentificationFilter@6eb0b582, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3ec0adb6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6aa8a50d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2b451416, org.springframework.security.web.session.SessionManagementFilter@392cb8a4, org.springframework.security.web.access.ExceptionTranslationFilter@4868794, org.springframework.security.web.access.intercept.AuthorizationFilter@7dbfa033]
+2023-03-14 11:44:49.205  WARN 10188 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:44:49.450  INFO 10188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:44:49.452  INFO 10188 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:44:49.470  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:44:49.914  INFO 10188 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-03-14 11:45:47.442  INFO 10188 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-03-14 11:45:47.469  INFO 10188 --- [Thread-43] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:45:47.838  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:45:47.873  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:45:47.941  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:45:47.965  INFO 10188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 316 ms
+2023-03-14 11:45:48.042  INFO 10188 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:45:48.169  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.169  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.170  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.170  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.170  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.170  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.170  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.170  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.171  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.171  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.171  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.171  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.172  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.172  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.172  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.172  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.172  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.172  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.173  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.173  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.173  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.173  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.174  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.174  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.174  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.174  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.174  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.175  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.175  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.175  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.175  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.175  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.176  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.176  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.176  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.176  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.176  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.176  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.176  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.176  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.177  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.177  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.177  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:48.177  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:45:48.282  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:45:48.549  INFO 10188 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4e062576, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d0450fb, org.springframework.security.web.context.SecurityContextPersistenceFilter@6dde9500, org.springframework.security.web.header.HeaderWriterFilter@659ab48a, org.springframework.security.web.authentication.logout.LogoutFilter@5dddcd80, com.projet.plage.config.JwtAuthentificationFilter@6a0fe315, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13bf42b8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@23319aa1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3ea947bc, org.springframework.security.web.session.SessionManagementFilter@63008c88, org.springframework.security.web.access.ExceptionTranslationFilter@51b5e556, org.springframework.security.web.access.intercept.AuthorizationFilter@1b558ea1]
+2023-03-14 11:45:48.571  WARN 10188 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:45:48.833  INFO 10188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:45:48.835  INFO 10188 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:45:48.870  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:45:49.257  INFO 10188 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-03-14 11:45:58.647  INFO 10188 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-03-14 11:45:58.669  INFO 10188 --- [Thread-47] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:45:59.018  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:45:59.048  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:45:59.133  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:45:59.163  INFO 10188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 326 ms
+2023-03-14 11:45:59.224  INFO 10188 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:45:59.358  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.358  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.358  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.358  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.359  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.359  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.359  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.359  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.360  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.360  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.360  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.360  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.360  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.360  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.361  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.361  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.361  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.361  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.361  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.361  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.362  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.362  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.362  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.362  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.362  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.362  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.362  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.363  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.363  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.363  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.363  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.363  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.363  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.363  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.364  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.364  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.364  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.364  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.364  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.364  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.364  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.364  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.365  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:45:59.365  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:45:59.466  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:45:59.748  INFO 10188 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3fcab059, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48d62a41, org.springframework.security.web.context.SecurityContextPersistenceFilter@1dd9e890, org.springframework.security.web.header.HeaderWriterFilter@19669c64, org.springframework.security.web.authentication.logout.LogoutFilter@99fce97, com.projet.plage.config.JwtAuthentificationFilter@380e15f5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5560ba92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78c899e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4ba6f1f6, org.springframework.security.web.session.SessionManagementFilter@22102577, org.springframework.security.web.access.ExceptionTranslationFilter@6735e899, org.springframework.security.web.access.intercept.AuthorizationFilter@6540e46c]
+2023-03-14 11:45:59.775  WARN 10188 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:46:00.044  INFO 10188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:46:00.046  INFO 10188 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:46:00.062  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:46:00.484  INFO 10188 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-03-14 11:46:32.944  INFO 10188 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-03-14 11:46:32.964  INFO 10188 --- [Thread-51] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:46:33.334  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:46:33.370  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:46:33.436  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:46:33.457  INFO 10188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 321 ms
+2023-03-14 11:46:33.519  INFO 10188 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:46:33.656  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.656  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.657  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.657  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.658  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.658  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.658  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.658  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.658  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.658  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.659  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.659  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.659  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.659  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.660  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.660  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.660  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.660  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.662  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.662  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.662  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.662  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.663  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.663  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.663  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.663  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.663  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.663  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.663  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.663  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:33.664  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:46:33.806  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:46:34.089  INFO 10188 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@9455192, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d71d177, org.springframework.security.web.context.SecurityContextPersistenceFilter@385cfe1b, org.springframework.security.web.header.HeaderWriterFilter@11ae8278, org.springframework.security.web.authentication.logout.LogoutFilter@3ced01ac, com.projet.plage.config.JwtAuthentificationFilter@2af8db16, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1de6767c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@78be8afa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@796dff0f, org.springframework.security.web.session.SessionManagementFilter@2f7699a6, org.springframework.security.web.access.ExceptionTranslationFilter@421cf07c, org.springframework.security.web.access.intercept.AuthorizationFilter@1e737429]
+2023-03-14 11:46:34.112  WARN 10188 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:46:34.366  INFO 10188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:46:34.368  INFO 10188 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:46:34.381  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:46:34.500  INFO 10188 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-14 11:46:34.503 ERROR 10188 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.projet.plage.PlageApplication.main(PlageApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.security.crypto.password.PasswordEncoder.encode(java.lang.CharSequence)" because "this.passwordEncoder" is null
+	at com.projet.plage.dto.ConcessionnaireDto.<init>(ConcessionnaireDto.java:92) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.ajouterConcessionnaire(AjoutDonneesInitiales.java:169) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.run(AjoutDonneesInitiales.java:80) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768) ~[spring-boot-2.7.8.jar:2.7.8]
+	... 10 common frames omitted
+
+2023-03-14 11:46:34.541  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:46:57.042  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:46:57.073  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:46:57.132  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:46:57.173  INFO 10188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 325 ms
+2023-03-14 11:46:57.245  INFO 10188 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:46:57.349  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.349  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.350  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.350  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.351  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.351  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.351  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.351  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.352  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.352  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.352  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.352  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.353  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.353  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.353  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.353  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.353  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.353  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.354  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.354  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.354  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.354  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.354  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.354  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.355  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.355  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.355  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.355  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.355  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.356  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.356  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.356  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.356  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.356  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.357  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.357  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.357  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.357  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.357  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.357  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.357  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.357  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.358  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:46:57.358  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:46:57.465  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:46:57.705  INFO 10188 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5f785403, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@63237b55, org.springframework.security.web.context.SecurityContextPersistenceFilter@14ad9313, org.springframework.security.web.header.HeaderWriterFilter@3456c0b3, org.springframework.security.web.authentication.logout.LogoutFilter@78f893fa, com.projet.plage.config.JwtAuthentificationFilter@1e27aafb, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7338599b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@71e94c17, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@45f784cf, org.springframework.security.web.session.SessionManagementFilter@38b9228c, org.springframework.security.web.access.ExceptionTranslationFilter@7b639237, org.springframework.security.web.access.intercept.AuthorizationFilter@728f9d3b]
+2023-03-14 11:46:57.724  WARN 10188 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:46:57.993  INFO 10188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:46:57.996  INFO 10188 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:46:58.033  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:46:58.063  INFO 10188 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-14 11:46:58.066 ERROR 10188 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.projet.plage.PlageApplication.main(PlageApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.security.crypto.password.PasswordEncoder.encode(java.lang.CharSequence)" because "this.passwordEncoder" is null
+	at com.projet.plage.dto.ConcessionnaireDto.<init>(ConcessionnaireDto.java:92) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.ajouterConcessionnaire(AjoutDonneesInitiales.java:169) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.run(AjoutDonneesInitiales.java:80) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768) ~[spring-boot-2.7.8.jar:2.7.8]
+	... 10 common frames omitted
+
+2023-03-14 11:46:58.083  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:48:08.472  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:48:08.512  INFO 10188 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:48:08.587  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:48:08.629  INFO 10188 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 361 ms
+2023-03-14 11:48:08.705  INFO 10188 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:48:08.825  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.826  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.826  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.826  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.826  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.826  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.827  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.827  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.827  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.827  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.828  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.828  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.828  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.828  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.829  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.829  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.829  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.829  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.830  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.831  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.832  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.833  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.835  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.835  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.835  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.835  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.835  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:08.835  WARN 10188 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:48:08.934  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:48:09.180  INFO 10188 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5fed649b, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5285ac92, org.springframework.security.web.context.SecurityContextPersistenceFilter@45860d95, org.springframework.security.web.header.HeaderWriterFilter@60b6d674, org.springframework.security.web.authentication.logout.LogoutFilter@1053b6d2, com.projet.plage.config.JwtAuthentificationFilter@302cf50e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5cfe9988, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@aade115, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2042945c, org.springframework.security.web.session.SessionManagementFilter@5f560b00, org.springframework.security.web.access.ExceptionTranslationFilter@628f6dc0, org.springframework.security.web.access.intercept.AuthorizationFilter@5d09a4cc]
+2023-03-14 11:48:09.220  WARN 10188 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:48:09.552  INFO 10188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:48:09.557  INFO 10188 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:48:09.598  INFO 10188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:48:09.637  INFO 10188 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-14 11:48:09.642 ERROR 10188 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.projet.plage.PlageApplication.main(PlageApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.security.crypto.password.PasswordEncoder.encode(java.lang.CharSequence)" because "this.passwordEncoder" is null
+	at com.projet.plage.dto.ConcessionnaireDto.<init>(ConcessionnaireDto.java:92) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.ajouterConcessionnaire(AjoutDonneesInitiales.java:168) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.run(AjoutDonneesInitiales.java:80) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768) ~[spring-boot-2.7.8.jar:2.7.8]
+	... 10 common frames omitted
+
+2023-03-14 11:48:09.664  INFO 10188 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:48:43.225  INFO 15048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-14 11:48:43.226  INFO 15048 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-14 11:48:44.498  INFO 15048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:48:44.631  INFO 15048 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:48:45.692  INFO 15048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:48:45.826  INFO 15048 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2599 ms
+2023-03-14 11:48:46.331  INFO 15048 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:48:48.032  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.033  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.033  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.034  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.034  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.035  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.035  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.035  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.036  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.036  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.037  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.037  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.037  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.037  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.038  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.038  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.038  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.038  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.040  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.040  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.040  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.040  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.041  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.041  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.042  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.042  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.042  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.042  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.044  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.044  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.044  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.044  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.044  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.044  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.045  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.045  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.045  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.045  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.046  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.046  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.047  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.047  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.048  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:48:48.048  WARN 15048 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:48:48.206  INFO 15048 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:48:49.405  INFO 15048 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5d51672d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@47e0b285, org.springframework.security.web.context.SecurityContextPersistenceFilter@19e711d2, org.springframework.security.web.header.HeaderWriterFilter@205664a1, org.springframework.security.web.authentication.logout.LogoutFilter@67983891, com.projet.plage.config.JwtAuthentificationFilter@7defd0d1, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@283de003, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@61935282, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6378c290, org.springframework.security.web.session.SessionManagementFilter@60a034f7, org.springframework.security.web.access.ExceptionTranslationFilter@bbec9e7, org.springframework.security.web.access.intercept.AuthorizationFilter@1cc0cd77]
+2023-03-14 11:48:49.555  WARN 15048 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:48:50.734  INFO 15048 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:48:50.743  INFO 15048 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:48:50.822  INFO 15048 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:48:51.098  INFO 15048 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-14 11:48:51.134 ERROR 15048 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.projet.plage.PlageApplication.main(PlageApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.security.crypto.password.PasswordEncoder.encode(java.lang.CharSequence)" because "this.passwordEncoder" is null
+	at com.projet.plage.dto.ConcessionnaireDto.<init>(ConcessionnaireDto.java:92) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.ajouterConcessionnaire(AjoutDonneesInitiales.java:168) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.run(AjoutDonneesInitiales.java:80) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768) ~[spring-boot-2.7.8.jar:2.7.8]
+	... 10 common frames omitted
+
+2023-03-14 11:48:51.172  INFO 15048 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:49:56.818  INFO 1484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-14 11:49:56.819  INFO 1484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-14 11:49:58.104  INFO 1484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:49:58.242  INFO 1484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:49:59.325  INFO 1484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:49:59.471  INFO 1484 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2651 ms
+2023-03-14 11:50:00.005  INFO 1484 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:50:01.810  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.810  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.811  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.812  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.813  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.813  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.814  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.814  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.815  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.815  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.816  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.816  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.816  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.816  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.818  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.818  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.819  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.819  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.819  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.819  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.820  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.821  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.822  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.822  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.823  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.824  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.825  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.825  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.826  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.826  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.827  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.827  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.828  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.828  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.828  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.829  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.829  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.829  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.830  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.830  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.831  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.831  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.832  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:50:01.832  WARN 1484 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:50:01.959  INFO 1484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:50:03.111  INFO 1484 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4d496a88, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5cd86b4a, org.springframework.security.web.context.SecurityContextPersistenceFilter@39063846, org.springframework.security.web.header.HeaderWriterFilter@159509d9, org.springframework.security.web.authentication.logout.LogoutFilter@77f0b3be, com.projet.plage.config.JwtAuthentificationFilter@322679ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6cd7b62b, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@d0c7b2e, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@47230ade, org.springframework.security.web.session.SessionManagementFilter@488a7671, org.springframework.security.web.access.ExceptionTranslationFilter@7398112b, org.springframework.security.web.access.intercept.AuthorizationFilter@9831063]
+2023-03-14 11:50:03.283  WARN 1484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:50:04.492  INFO 1484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:50:04.502  INFO 1484 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:50:04.577  INFO 1484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:50:04.847  INFO 1484 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2023-03-14 11:50:04.878 ERROR 1484 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+java.lang.IllegalStateException: Failed to execute CommandLineRunner
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:771) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:752) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:314) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.8.jar:2.7.8]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.8.jar:2.7.8]
+	at com.projet.plage.PlageApplication.main(PlageApplication.java:14) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.8.jar:2.7.8]
+Caused by: java.lang.NullPointerException: Cannot invoke "org.springframework.security.crypto.password.PasswordEncoder.encode(java.lang.CharSequence)" because "this.passwordEncoder" is null
+	at com.projet.plage.dto.ConcessionnaireDto.<init>(ConcessionnaireDto.java:92) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.ajouterConcessionnaire(AjoutDonneesInitiales.java:168) ~[classes/:na]
+	at com.projet.plage.initialisation.AjoutDonneesInitiales.run(AjoutDonneesInitiales.java:80) ~[classes/:na]
+	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:768) ~[spring-boot-2.7.8.jar:2.7.8]
+	... 10 common frames omitted
+
+2023-03-14 11:50:04.915  INFO 1484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:52:18.771  INFO 8556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-14 11:52:18.773  INFO 8556 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-14 11:52:19.989  INFO 8556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:52:20.122  INFO 8556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 120 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:52:21.128  INFO 8556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:52:21.258  INFO 8556 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2484 ms
+2023-03-14 11:52:21.730  INFO 8556 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:52:23.408  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.408  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.409  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.409  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.410  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.410  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.410  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.410  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.411  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.411  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.412  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.412  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.412  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.412  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.413  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.413  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.414  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.414  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.415  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.415  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.415  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.415  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.416  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.416  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.416  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.416  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.417  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.417  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.418  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.418  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.418  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.418  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.418  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.419  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.419  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.419  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.419  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.419  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.420  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.420  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.420  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.420  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.421  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:52:23.421  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:52:23.590  INFO 8556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:52:24.794  INFO 8556 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4b85adcc, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@26aa987a, org.springframework.security.web.context.SecurityContextPersistenceFilter@41278592, org.springframework.security.web.header.HeaderWriterFilter@2d01ae65, org.springframework.security.web.authentication.logout.LogoutFilter@f3aa12, com.projet.plage.config.JwtAuthentificationFilter@52e096a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@464b6cc6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6a3434b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@49c4daa7, org.springframework.security.web.session.SessionManagementFilter@399e781e, org.springframework.security.web.access.ExceptionTranslationFilter@545f14c8, org.springframework.security.web.access.intercept.AuthorizationFilter@50b7beb8]
+2023-03-14 11:52:24.939  WARN 8556 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:52:26.177  INFO 8556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:52:26.184  INFO 8556 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:52:26.260  INFO 8556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:52:35.320  INFO 8556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-03-14 11:52:35.326  INFO 8556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2023-03-14 11:52:35.973  WARN 8556 --- [http-nio-8080-exec-1] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2023-03-14 11:53:46.296  WARN 8556 --- [http-nio-8080-exec-4] o.s.s.c.bcrypt.BCryptPasswordEncoder     : Encoded password does not look like BCrypt
+2023-03-14 11:54:40.825  INFO 8556 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+2023-03-14 11:54:40.864  INFO 8556 --- [Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:54:41.421  INFO 8556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-14 11:54:41.484  INFO 8556 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 61 ms. Found 10 JPA repository interfaces.
+2023-03-14 11:54:41.603  INFO 8556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-03-14 11:54:41.624  INFO 8556 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 576 ms
+2023-03-14 11:54:41.709  INFO 8556 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:postgresql://localhost:5432/plageSpringSecurity'
+2023-03-14 11:54:41.960  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.961  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.962  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.962  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.963  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.963  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.963  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.963  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.964  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.964  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.965  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.965  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.965  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.965  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.966  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.966  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.967  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.967  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.967  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.967  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la relation « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.968  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.968  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « _user » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.969  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.969  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « concessionnaire » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.970  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.970  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « file » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.971  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.971  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « lien_de_parente » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.972  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.972  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « locataire » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.972  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.972  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.973  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.973  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « location_parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.973  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.974  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « parasol » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.974  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.974  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « pays » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.975  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.975  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « salage » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.975  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.975  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la table « statut » n'existe pas, poursuite du traitement
+2023-03-14 11:54:41.976  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Warning Code: 0, SQLState: 00000
+2023-03-14 11:54:41.976  WARN 8556 --- [restartedMain] o.h.engine.jdbc.spi.SqlExceptionHelper   : la séquence « hibernate_sequence » n'existe pas, poursuite du traitement
+2023-03-14 11:54:42.105  INFO 8556 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-14 11:54:42.505  INFO 8556 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@344854cf, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5f44f7ea, org.springframework.security.web.context.SecurityContextPersistenceFilter@4590db3, org.springframework.security.web.header.HeaderWriterFilter@21fc2c67, org.springframework.security.web.authentication.logout.LogoutFilter@6a7032ee, com.projet.plage.config.JwtAuthentificationFilter@20dec7ab, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@525692df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@128913e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@67822f2a, org.springframework.security.web.session.SessionManagementFilter@7ee94b8d, org.springframework.security.web.access.ExceptionTranslationFilter@1028ce21, org.springframework.security.web.access.intercept.AuthorizationFilter@561ab15a]
+2023-03-14 11:54:42.540  WARN 8556 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-14 11:54:42.961  INFO 8556 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2023-03-14 11:54:42.965  INFO 8556 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2023-03-14 11:54:42.988  INFO 8556 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-03-14 11:54:43.552  INFO 8556 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2023-03-14 11:54:56.186  INFO 8556 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'

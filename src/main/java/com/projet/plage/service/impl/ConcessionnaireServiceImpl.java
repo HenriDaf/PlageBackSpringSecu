@@ -52,19 +52,8 @@ public class ConcessionnaireServiceImpl implements IConcessionnaireService {
 		if (concessionnaireDto != null && concessionnaireDao.findByEmail(concessionnaireDto.getEmail()) == null) {
 			Concessionnaire concessionnaire = concessionnaireMapper.toEntity(concessionnaireDto);
 
-			ArrayList<Object> info = (iChiffrageService.genererChiffrage(concessionnaire.getPassword()));
-
-			if (info.size() == 2) {
-				Salage salage = new Salage((byte[]) info.get(1), concessionnaire);
-				iSalageService.ajouterSalage(salage);
-				concessionnaire.setSalage(salage);
-				concessionnaire.setPassword(info.get(0).toString());
-
 				return concessionnaireDao.save(concessionnaire);
-			} else {
-				throw new EchecCreationUtilisateurException(
-						"Echec lors de la création de l'utilisateur, veuillez recommencer ultérieurement");
-			}
+			
 
 		} else {
 			throw new UtilisateurDejaExistantException(
