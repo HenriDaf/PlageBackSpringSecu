@@ -23,7 +23,7 @@ public class SecurityConfiguration {
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
 		
-		String[]pathArray= new String[] {"/api/v1/auth/**", "/api/**"};
+		String[]pathArray= new String[] {"/api/v1/auth/**"};
 		String[]swaggerArray=new String[] {
 				"/v3/api-docs",
 				"/swagger-ui/**",
@@ -44,7 +44,7 @@ public class SecurityConfiguration {
 		.disable()
 		
 		.authorizeHttpRequests()
-		.antMatchers("/api/locations/locataireMail/**").permitAll()
+		//.antMatchers("/api/locations/locataireMail/**").permitAll()
 		//.antMatchers(pathConcessionnaire).hasAuthority("CONCESSIONNAIRE")
 		//.antMatchers(pathLocataire).hasAuthority("LOCATAIRE")
 		.antMatchers(swaggerArray)

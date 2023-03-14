@@ -31,6 +31,8 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(@NonNull HttpServletRequest request, @NonNull HttpServletResponse response,
 			@NonNull FilterChain filterChain) throws ServletException, IOException {
 		
+		
+		log.info("juste un test");
 		log.debug("");
 		log.debug("");
 		log.debug("--------------------------------------------------------------------------------------------");

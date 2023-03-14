@@ -127,7 +127,7 @@ public class LocationControllerRest {
 		return ResponseEntity.ok(location);
 		}
 
-	//@PreAuthorize("hasAuthority('CONCESSIONNAIRE')")
+	@PreAuthorize("hasAuthority('CONCESSIONNAIRE')")
 	@GetMapping("/locations/liste-location")
 	public ResponseEntity<List<Location>> getAllLocation() {
 

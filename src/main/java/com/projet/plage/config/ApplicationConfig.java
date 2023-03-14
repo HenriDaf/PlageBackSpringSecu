@@ -43,12 +43,10 @@ public class ApplicationConfig {
 	return username -> {
 		
 			if (concessionnaireDao.findByEmail(username) != null) {
-				System.out.println(1);
 				System.out.println(concessionnaireDao.findByEmail(username));
 				return concessionnaireDao.findByEmail(username);
 			}
 			if (locataireDao.findByEmail(username) != null) {
-				System.out.println(2);
 				System.out.println(locataireDao.findByEmail(username));
 				return locataireDao.findByEmail(username);
 			}
