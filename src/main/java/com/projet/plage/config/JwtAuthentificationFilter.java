@@ -16,6 +16,8 @@ import org.springframework.security.web.authentication.WebAuthenticationDetailsS
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
+import com.projet.plage.exception.UtilisateurNonTrouveException;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
@@ -46,9 +48,11 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 			return;
 		}
 		
+		
 		jwt= authHeader.substring(7);
+		
 		//log.info("jwt: "+jwt);
-		userEmail= jwtService.extractUsername(jwt); //extract userEmail from JWT token;
+		userEmail= jwtService.extractUsername(jwt); 
 		log.debug("userEmail: "+userEmail);
 		
 		if(userEmail != null && SecurityContextHolder.getContext().getAuthentication()==null) {
@@ -64,8 +68,7 @@ public class JwtAuthentificationFilter extends OncePerRequestFilter {
 						);
 				
 				authenticationToken.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-				//System.out.println("authenti token "+authenticationToken);
-
+				
 				log.debug("");
 				SecurityContextHolder.getContext().setAuthentication(authenticationToken);
 			}

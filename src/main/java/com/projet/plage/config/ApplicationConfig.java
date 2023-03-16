@@ -40,15 +40,13 @@ public class ApplicationConfig {
 		 */
 
 	return username -> {
-		System.out.println(1);
+		
 			if (concessionnaireDao.findByEmail(username) != null) {
-				System.out.println(concessionnaireDao.findByEmail(username));
+		
 				return concessionnaireDao.findByEmail(username);
 			}
 			if (locataireDao.findByEmail(username) != null) {
-				//System.out.println(locataireDao.findByEmail(username));
-				System.out.println(2);
-				System.out.println(locataireDao.findIdByEmail(username));
+			
 				return locataireDao.findByEmail(username);
 			}
 			throw new UtilisateurNonTrouveException("Échec  de l'authentification, identifiants incorrects");
@@ -65,11 +63,13 @@ public class ApplicationConfig {
 
 	@Bean
 	public AuthenticationProvider authentificationProvider() {
+	
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
+	
 		authenticationProvider.setUserDetailsService(userDetailsService());
-		System.out.println(5);
+	
 		authenticationProvider.setPasswordEncoder(passwordEncoder());
-		System.out.println("authenticationProvider "+authenticationProvider);
+		
 		return authenticationProvider;
 
 	}
@@ -77,8 +77,7 @@ public class ApplicationConfig {
 	@Bean
 	public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
 			throws Exception {
-		System.out.println("authenticationMananger "+ authenticationConfiguration.getAuthenticationManager());
-		System.out.println(6);
+	
 		return authenticationConfiguration.getAuthenticationManager();
 	}
 

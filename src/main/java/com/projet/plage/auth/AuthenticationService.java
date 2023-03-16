@@ -116,14 +116,10 @@ public class AuthenticationService {
 				.build();*/
 		
 		ConcessionnaireDto concessionnaireDto= new ConcessionnaireDto(null, request.getNom(), request.getPrenom(), request.getEmail(), request.getNumeroDeTelephone(),passwordEncoder.encode(request.getPassword()), Role.CONCESSIONNAIRE);
-		System.out.println(concessionnaireDto);
-		System.out.println(request.getPassword());
-		System.out.println("password: "+concessionnaireDto.getPassword());
-		System.out.println("telephone "+concessionnaireDto.getNumeroDeTelephone());
+		
 		//iConcessionnaireService.ajouterConcessionnaire(concessionnaireDto);*/
 		Concessionnaire concessionnaire=concessionnaireMapper.toEntity(concessionnaireDto);
-	//	System.out.println(concessionnaire);
-		//log.warn(concessionnaire.toString());
+	
 		concessionnaireDao.save(concessionnaire);
 		var jwtToken=jwtService.generateToken(concessionnaire);
 		
@@ -155,27 +151,30 @@ public class AuthenticationService {
 	public AuthenticationResponse authenticateLocataire(AuthenticationRequest request) {
 		
 		
-	System.out.println(22);
+	try {
 		authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(
 						request.getEmail(), 
 						request.getPassword()
 						)
 				);
+	}catch (Exception e) {
+		throw new UtilisateurNonTrouveException("Échec de l'authentification, identifiants incorrects");
+	    
 		
-		System.out.println(22);
+	}
+		
 	    Locataire locataire=iLocataireService.recupererLocataireParEmail(request.getEmail());
 	    
-	    System.out.println("jwtSercice.generateToken: "+ jwtService.generateToken(locataire));
-	    var jwtToken= jwtService.generateToken(locataire);
+	   var jwtToken= jwtService.generateToken(locataire);
 	    if(jwtToken!=null) {
-	    	System.out.println(3);
+	    
 	    	return AuthenticationResponse.builder()
 					.token(jwtToken)
 					.build();
 	    }
-	    System.out.println("token "+jwtToken);
-	    throw new UtilisateurNonTrouveException("Échec  de l'authentification, identifiants incorrects");
+
+	    throw new UtilisateurNonTrouveException("Échec de l'authentification, identifiants incorrects");
 	    
 
 		
@@ -185,20 +184,33 @@ public class AuthenticationService {
 	
 	public AuthenticationResponse authenticateConcessionnaire(AuthenticationRequest request) {
 		
-		authenticationManager.authenticate(
-				new UsernamePasswordAuthenticationToken(
-						request.getEmail(), 
-						request.getPassword()
-						)
-				);
-		System.out.println(request.getEmail());
+	
+		try {
+			authenticationManager.authenticate(
+					new UsernamePasswordAuthenticationToken(
+							request.getEmail(), 
+							request.getPassword()
+							)
+					);	
+		}catch (Exception e) {
+			 throw new UtilisateurNonTrouveException("Échec de l'authentification, identifiants incorrects");
+			    
+
+		}
+		
+		
 		Concessionnaire concessionnaire= iConcessionnaireService.recupererParEmail(request.getEmail());
 		
 		var jwtToken= jwtService.generateToken(concessionnaire);
+		if(jwtToken!=null) {
+			return AuthenticationResponse.builder()
+					.token(jwtToken)
+					.build();	
+		}
 		
-		return AuthenticationResponse.builder()
-				.token(jwtToken)
-				.build();
+		throw new UtilisateurNonTrouveException("Échec de l'authentification, identifiants incorrects");
+	    
+		
 	}
 
 }

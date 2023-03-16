@@ -32,7 +32,7 @@ public class SecurityConfiguration {
 		
 		
 		
-		//String[]pathArray= new String[] {"/api/v1/auth/**"};
+
 		String[]pathAngular=new String[] {"/api/recupererListeConcessionnaire","/creationLocataire", "/api/locations/create","concessionnaire/liste-location/traitement", "/api/**"};
 		String[]pathConcessionnaire=new String[] {"/api/recupererListeLocataire","/api/locations/liste-location ","/api/locations/liste-location"};
 		String[]pathLocataire=new String[] {"/api/locations/locataireMail/**"};
@@ -45,20 +45,12 @@ public class SecurityConfiguration {
 		
 		.authorizeHttpRequests()
 		.antMatchers("/api/locations/locataireMail/**").permitAll()
-		//.antMatchers(pathConcessionnaire).hasAuthority("CONCESSIONNAIRE")
-		//.antMatchers(pathLocataire).hasAuthority("LOCATAIRE")
 		.antMatchers(swaggerArray)
 		.permitAll()
 		.antMatchers(pathArray)
 		.permitAll()
-		//.antMatchers(pathConcessionnaire).permitAll()//.hasAuthority("CONCESSIONNAIRE")
-		//.antMatchers(pathLocataire).permitAll()//.hasAuthority("LOCATAIRE")
 		.anyRequest()
 		.authenticated()
-		//.anyRequest()
-		//.permitAll()
-		/*.antMatchers(pathConcessionnaire)
-		.hasAuthority("CONCESSIONNAIRE")*/
 		.and()
 		.addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
 		.sessionManagement()
