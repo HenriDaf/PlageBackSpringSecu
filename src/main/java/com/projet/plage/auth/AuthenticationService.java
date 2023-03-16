@@ -18,6 +18,7 @@ import com.projet.plage.entity.Concessionnaire;
 import com.projet.plage.entity.Locataire;
 import com.projet.plage.entity.Role;
 import com.projet.plage.entity.User;
+import com.projet.plage.exception.UtilisateurNonTrouveException;
 import com.projet.plage.mapper.ConcessionnaireMapper;
 import com.projet.plage.mapper.LocataireMapper;
 import com.projet.plage.service.IConcessionnaireService;
@@ -154,7 +155,7 @@ public class AuthenticationService {
 	public AuthenticationResponse authenticateLocataire(AuthenticationRequest request) {
 		
 		
-	
+	System.out.println(22);
 		authenticationManager.authenticate(
 				new UsernamePasswordAuthenticationToken(
 						request.getEmail(), 
@@ -162,16 +163,22 @@ public class AuthenticationService {
 						)
 				);
 		
-		System.out.println(request.getEmail());
+		System.out.println(22);
 	    Locataire locataire=iLocataireService.recupererLocataireParEmail(request.getEmail());
 	    
+	    System.out.println("jwtSercice.generateToken: "+ jwtService.generateToken(locataire));
 	    var jwtToken= jwtService.generateToken(locataire);
+	    if(jwtToken!=null) {
+	    	System.out.println(3);
+	    	return AuthenticationResponse.builder()
+					.token(jwtToken)
+					.build();
+	    }
+	    System.out.println("token "+jwtToken);
+	    throw new UtilisateurNonTrouveException("Échec  de l'authentification, identifiants incorrects");
 	    
-	    
-	
-		return AuthenticationResponse.builder()
-				.token(jwtToken)
-				.build();
+
+		
 		
 		
 	}

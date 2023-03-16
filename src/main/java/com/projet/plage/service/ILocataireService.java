@@ -15,6 +15,7 @@ public interface ILocataireService {
 	Locataire recupererLocataireParEmail(String email);
 
 	
+	Locataire recupererLocataireParEmailMotDePasse(String email, String motDePasse);
 	
 	Locataire ajouterLocataire(Locataire locataire);
 

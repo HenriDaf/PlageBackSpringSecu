@@ -55,9 +55,9 @@ public class AuthenticationController {
 	}
 	
 	@PostMapping("/authentificationLocataire")
-	public ResponseEntity<AuthenticationResponse>authenticateLocataire(@RequestBody AuthenticationRequest request){
-		return ResponseEntity.ok(authenticationService.authenticateLocataire(request));
+	public AuthenticationResponse authenticateLocataire(@RequestBody AuthenticationRequest request){
 		
+		return authenticationService.authenticateLocataire(request);
 		/*
 		 * Possibilité de renvoyer un objet DTO avec nom prenom email mdp dans le ResponseEntity
 		 * et du coup il faudrait peut ajouter le token dans cet objet

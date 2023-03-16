@@ -180,7 +180,7 @@ System.out.println(locations);
 		return ResponseEntity.ok(location);
 
 	}
-
+	@PreAuthorize("hasAuthority('CONCESSIONNAIRE')")
 	@PutMapping("/changerStatutLocation")
 	public ResponseEntity<Location> modifierStatutLocation(@RequestBody ObjectNode objectNode) throws Exception {
 

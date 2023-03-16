@@ -3,6 +3,7 @@ package com.projet.plage.controller;
 import java.util.List;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,10 +33,11 @@ public class StatutControllerRest {
 	 * Cette méthode récupère une liste de statuts.
 	 * @return List<Statut>
 	 */
-	@GetMapping("liste-des-statuts")
+	@PreAuthorize("hasAuthority('CONCESSIONNAIRE')")
+	@GetMapping("listeDesStatuts")
 	@ResponseStatus(code=HttpStatus.OK)
 	@Operation(description = "Afficher la liste des statuts")
-	List<Statut> recupererPays(){
+	List<Statut> recupererStatut(){
 		
 		return statutService.recupererStatuts();
 	}

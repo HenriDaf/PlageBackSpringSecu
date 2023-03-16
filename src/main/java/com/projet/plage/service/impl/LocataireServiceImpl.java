@@ -47,7 +47,11 @@ public class LocataireServiceImpl implements ILocataireService {
 		return locataireDao.findByEmail(email);
 	}
 
+	@Override
+	public Locataire recupererLocataireParEmailMotDePasse(String email, String motDePasse) {
 
+		return locataireDao.findByEmailAndPassword(email, motDePasse);
+	}
 
 	@Override
 	public Locataire ajouterLocataire(LocataireDto locataireDto) {
@@ -160,5 +164,7 @@ System.out.println(locations);
 		throw new UtilisateurNonTrouveException("Utilisateur non existant");
 		// return false;//throw exception utilisateur non trouve
 	}
+
+
 
 }

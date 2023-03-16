@@ -8,16 +8,15 @@ import org.springframework.security.authentication.dao.DaoAuthenticationProvider
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.projet.plage.dao.ConcessionnaireDao;
 import com.projet.plage.dao.LocataireDao;
-import com.projet.plage.dao.UserRepository;
+import com.projet.plage.exception.UtilisateurNonTrouveException;
 
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
+
 
 @Configuration
 @EnableGlobalMethodSecurity(
@@ -41,16 +40,18 @@ public class ApplicationConfig {
 		 */
 
 	return username -> {
-		
+		System.out.println(1);
 			if (concessionnaireDao.findByEmail(username) != null) {
 				System.out.println(concessionnaireDao.findByEmail(username));
 				return concessionnaireDao.findByEmail(username);
 			}
 			if (locataireDao.findByEmail(username) != null) {
-				System.out.println(locataireDao.findByEmail(username));
+				//System.out.println(locataireDao.findByEmail(username));
+				System.out.println(2);
+				System.out.println(locataireDao.findIdByEmail(username));
 				return locataireDao.findByEmail(username);
 			}
-			return null;
+			throw new UtilisateurNonTrouveException("Échec  de l'authentification, identifiants incorrects");
 
 		};
 
@@ -66,6 +67,7 @@ public class ApplicationConfig {
 	public AuthenticationProvider authentificationProvider() {
 		DaoAuthenticationProvider authenticationProvider = new DaoAuthenticationProvider();
 		authenticationProvider.setUserDetailsService(userDetailsService());
+		System.out.println(5);
 		authenticationProvider.setPasswordEncoder(passwordEncoder());
 		System.out.println("authenticationProvider "+authenticationProvider);
 		return authenticationProvider;
@@ -76,6 +78,7 @@ public class ApplicationConfig {
 	public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration)
 			throws Exception {
 		System.out.println("authenticationMananger "+ authenticationConfiguration.getAuthenticationManager());
+		System.out.println(6);
 		return authenticationConfiguration.getAuthenticationManager();
 	}
 
